@@ -1,0 +1,32 @@
+
+<div style="background:black;color:rgb(96, 252, 96);margin: -24px; padding:24px">
+    <h3 mat-dialog-title><div mat-card-avatar class="icon-image"></div>{{modulevideo.name}}</h3>
+    <mat-dialog-content>
+        <div class="embed-responsive embed-responsive-16by9" style="width:100%;margin:auto 0;">
+            <iframe class="embed-responsive-item" [src]="videoSrc" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center" class="row">
+        <span *ngIf="!isRated" class="col-md-3 col-sm-12"><button style="width:100%;" color="accent" mat-flat-button (click)="onRatingChanged(4)" class="btn-stat">Clearly Understood</button></span> 
+        <span *ngIf="!isRated" class="col-md-3 col-sm-12"><button style="width:100%;" color="accent" mat-flat-button (click)="onRatingChanged(3)" class="btn-stat">Understood</button></span>
+        <span *ngIf="!isRated" class="col-md-3 col-sm-12"><button style="width:100%;" color="accent" mat-flat-button (click)="onRatingChanged(2)" class="btn-stat">Confused</button></span>
+        <span *ngIf="!isRated" class="col-md-3 col-sm-12"><button style="width:100%;" color="accent" mat-flat-button (click)="onRatingChanged(1)" class="btn-stat">Didn't Understand</button></span>
+        <span *ngIf="isRated" style="width:100%;margin: auto;">
+            <button mat-raised-button color="warn" mat-dialog-close style="width:100%;" >Close</button>
+        </span>
+    </mat-dialog-actions>
+</div>
+<!-- 
+<mat-menu #videoClose="matMenu">
+    <span class="col-md-3 col-sm-12"><button style="width:90%;margin: auto;"  mat-flat-button>Clearly Understood</button></span> 
+    <span class="col-md-3 col-sm-12"><button style="width:90%;margin: auto;" mat-dialog-close mat-flat-button>Understood</button></span>
+    <span class="col-md-3 col-sm-12"><button style="width:90%;margin: auto;" mat-dialog-close mat-flat-button>Confused</button></span>
+    <span class="col-md-3 col-sm-12"><button style="width:90%;margin: auto;" mat-dialog-close mat-flat-button>Didn't Understand</button></span>
+</mat-menu> -->
+
+<style>
+    mat-dialog-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+</style>

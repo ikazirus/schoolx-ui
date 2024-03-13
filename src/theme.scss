@@ -1,0 +1,82 @@
+@import '../node_modules/@angular/material/theming';
+@include mat-core();
+
+$md-green: (
+    50 : #e1f1e0,
+    100 : #b5ddb3,
+    200 : #84c780,
+    300 : #52b04d,
+    400 : #2d9f26,
+    500 : #088e00,
+    600 : #078600,
+    700 : #067b00,
+    800 : #047100,
+    900 : #025f00,
+    A100 : #90ff90,
+    A200 : #5dff5d,
+    A400 : #2aff2a,
+    A700 : #10ff10,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$md-black: (
+    50 : #6d6d6d,
+    100 : #6d6d6d,
+    200 : #808080,
+    300 : #4d4d4d,
+    400 : #262626,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #a6a6a6,
+    A200 : #8c8c8c,
+    A400 : #737373,
+    A700 : #666666,
+    contrast: (
+        50 : #e1f1e0,
+        100 : #b5ddb3,
+        200 : #84c780,
+        300 : #52b04d,
+        400 : #6aeb63,
+        500 : #2ad322,
+        600 : #2cd623,
+        700 : #27db1e,
+        800 : #0dc507,
+        900 : #039b00,
+        A100 : #90ff90,
+        A200 : #5dff5d,
+        A400 : #2aff2a,
+        A700 : #10ff10,
+    )
+);
+
+
+
+
+
+
+$my-app-primary: mat-palette($md-black);
+$my-app-accent:  mat-palette($md-green);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);

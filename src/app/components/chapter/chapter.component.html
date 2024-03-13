@@ -1,0 +1,13 @@
+<div class="container" style="padding-top:10px;">
+    <div *ngFor="let x of chapter" class="container-chapter">
+        <button mat-raised-button color="primary" (click)="onSelect(x)"  class="button-chapter">
+            <div mat-card-avatar 
+            style="background-image: url('assets/img/sub.png');
+            float: left;
+            background-size: cover;">
+            </div>
+            <span style="padding-left:10px;">{{x.name}}</span>
+        </button>
+    </div>
+</div>
+

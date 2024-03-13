@@ -1,0 +1,166 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+*{
+  background: transparent;
+}
+
+html, body {
+  background-image: url("assets/img/Green_School_Board_Background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+
+.nav-main{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: green;
+  padding: 10px;
+  z-index: 100;
+}
+
+.mat-drawer-container {
+  color: rgba(0, 0, 0, 0.87);
+  background: transparent;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+a:hover , button:hover {
+  color: #99ff8b;
+  text-decoration: none;
+}
+
+button{
+  text-align: left;
+}
+
+.icon-image{
+  color: red;
+}
+
+.container-chapter{
+  min-width: 18%;
+  margin: 1% auto;
+  display: block;
+}
+
+
+
+.button-chapter{
+  border-radius: 16px;
+  padding:20px;
+  /* background:green; */
+  /* color:white; */
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  left: 0;
+}
+
+.button-grade{
+  border-radius: 16px;
+  padding:20px;
+  min-width: 18%;
+  font-weight: 500;
+  margin: 1%;
+  min-width: 180px;
+}
+
+button:hover {
+  color: #99ff8b;
+  text-decoration: none;
+} 
+
+.grade-num{
+  font-size:300%; 
+  font-weight:800;
+  padding:5px;
+}
+
+
+.card-module-video{
+  width: 100%;
+  margin: 4% auto;
+  display: inline-block;
+}
+
+.btn-stat{
+  border-radius: 16px;
+  min-width: 98%;
+  margin: 1% auto;
+}
+
+button:hover {
+  color: #99ff8b;
+  text-decoration: none;
+}
+
+
+.container-module{
+  min-width: 18%;
+  margin: 1% auto;
+  display: block;
+}
+
+.button-module{
+  border-radius: 16px;
+  padding:20px;
+  /* background:green; */
+  /* color:white; */
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  left: 0;
+}
+
+button:hover {
+  color: #99ff8b;
+  text-decoration: none;
+}

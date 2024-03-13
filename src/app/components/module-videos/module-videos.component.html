@@ -1,0 +1,102 @@
+
+<div class="row" style="width:95%; margin:auto;padding:0px" >
+  <div class="col-lg-2 col-md-6 col-sm-12">
+    <button mat-raised-button color="primary" class="btn-stat" style="text-align: left;padding: 8px;">
+        <mat-icon>mood</mat-icon> Clearly Understood
+    </button>
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-12">
+    <button mat-raised-button color="primary" class="btn-stat" style="text-align: left;padding: 8px;">
+        <mat-icon>sentiment_satisfied</mat-icon> Understood
+    </button>
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-12">
+    <button mat-raised-button color="primary" class="btn-stat" style="text-align: left;padding: 8px;">
+        <mat-icon>sentiment_very_dissatisfied</mat-icon> Confused
+    </button>
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-12">
+    <button mat-raised-button color="primary" class="btn-stat" style="text-align: left;padding: 8px;">
+        <mat-icon>mood_bad</mat-icon> Didn't Understand
+    </button>
+  </div>
+
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <a mat-raised-button color="primary" class="btn-stat" style="text-align: left;padding: 8px;" [matMenuTriggerFor]="tutor" >
+      <mat-icon>arrow_drop_down</mat-icon> Select Tutor </a>      
+  </div>
+</div>
+
+<mat-menu #tutor="matMenu">
+  <a mat-menu-item>Tutor 01</a>
+  <a mat-menu-item>Tutor 02</a>
+  <a mat-menu-item>Tutor 03</a>
+  <a mat-menu-item>Tutor 04</a>
+</mat-menu>
+
+<div class="container">
+    <div class="row" >
+      <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-lg-3" *ngFor="let x of modulevideo">
+        <div class="card-module-video">
+          <mat-card color="primary">
+            <mat-card-header>
+              <mat-card-title>{{x.name}}</mat-card-title>
+              <mat-card-subtitle>by {{x.tutor}}</mat-card-subtitle>
+            </mat-card-header>
+              <img mat-card-image (click)="openDialog(x)" src="http://img.youtube.com/vi/{{x.video}}/default.jpg" alt="Video not available">
+            <mat-card-content>
+              
+              <p>Clearly Understood <span class="pull-right">
+                  <div mat-card-avatar 
+                  style="background-image: url('assets/img/circle.png');
+                  float: right;
+                  background-size: cover;
+                  padding: 10px;
+                  margin: -10px;">
+                  <span style="text-align: center;">{{x.cun}}</span>
+                  </div>
+                </span>
+              </p>
+              <div style="height: 4px;"></div>
+              <p>Understood <span class="pull-right">
+                  <div mat-card-avatar 
+                  style="background-image: url('assets/img/circle.png');
+                  float: right;
+                  background-size: cover;
+                  padding: 10px;
+                  margin: -10px;">
+                  <span style="text-align: center;">{{x.und}}</span>
+                  </div>
+              </span></p>
+              <div style="height: 4px;"></div>
+              <p>Confused <span class="pull-right"><div mat-card-avatar 
+                style="background-image: url('assets/img/circle.png');
+                float: right;
+                background-size: cover;
+                padding: 10px;
+                margin: -10px;">
+                <span style="text-align: center;">{{x.con}}</span>
+                </div>
+              </span></p>
+              <div style="height: 4px;"></div>
+              <p>Didn't Understand <span class="pull-right"><div mat-card-avatar 
+                style="background-image: url('assets/img/circle.png');
+                float: right;
+                background-size: cover;
+                padding: 10px;
+                margin: -10px;">
+                <span style="text-align: center;">{{x.dun}}</span>
+                </div>
+              </span></p>
+            
+            </mat-card-content>
+          </mat-card>
+        </div> 
+      </div>
+    </div>
+</div>
+
+
